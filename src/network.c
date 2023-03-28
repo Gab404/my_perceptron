@@ -10,28 +10,32 @@ void initNetwork(network_t *network)
 
     network->neuron->activateFunction = &sigmoidFunction;
     network->neuron->lossFunction = &logLoss;
-    network->neuron->w1 = ((float)(rand() % (100 + 1 - 1) + 1)) / 100;
-    network->neuron->w2 = ((float)(rand() % (100 + 1 - 1) + 1)) / 100;
     network->neuron->bias = ((float)(rand() % (100 + 1 - 1) + 1)) / 100;
 }
 
-void freeNetwork(network_t *network)
+void freeNetwork(network_t *net)
 {
-    free(network->x1);
-    free(network->x2);
-    free(network->label);
-    free(network->networkOut);
+    for (int i = 0; i < net->nbInput; i++) {
+        free(net->trainData[i]);
+        free(net->testData[i]);
+    }
+    free(net->trainData);
+    free(net->testData);
+    free(net->labelTrain);
+    free(net->labelTest);
+    free(net->networkOut);
 
-    free(network->neuron);
-    free(network);
+    free(net->neuron->w);
+    free(net->neuron);
+    free(net);
 }
 
-void computeNetOut(network_t *network)
+void computeNetOut(network_t *network, float **x, int len)
 {
     float result;
 
-    for (int i = 0; i < network->nb_data; i++) {
-        result = linearFunction(network->neuron, network->x1[i], network->x2[i]);
+    for (int i = 0; i < len; i++) {
+        result = linearFunction(network, i, x);
         result = network->neuron->activateFunction(result);
         network->networkOut[i] = result;
     }

@@ -22,7 +22,8 @@ float calcGradientBias(float b, float *networkOut, float *label, float nb_data)
 
 void updateNetwork(network_t *net)
 {
-    net->neuron->w1 -= net->learningRate * calcGradientWeight(net->neuron->w1, net->networkOut, net->label, net->x1, net->nb_data);
-    net->neuron->w2 -= net->learningRate * calcGradientWeight(net->neuron->w2, net->networkOut, net->label, net->x2, net->nb_data);
-    net->neuron->bias -= net->learningRate * calcGradientBias(net->neuron->bias, net->networkOut, net->label, net->nb_data);
+    for (int i = 0; i < net->nbInput; i++)
+        net->neuron->w[i] -= net->learningRate * calcGradientWeight(net->neuron->w[i], net->networkOut, net->labelTrain, net->trainData[i], net->lenDataTrain);
+
+    net->neuron->bias -= net->learningRate * calcGradientBias(net->neuron->bias, net->networkOut, net->labelTrain, net->lenDataTrain);
 }
