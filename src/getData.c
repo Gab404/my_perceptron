@@ -68,8 +68,6 @@ void getData(network_t *net,char *filepath)
 
     fscanf(fp, "%f", &net->lenDataTrain);
     fscanf(fp, "%d", &net->nbInput);
-    net->neuron->w = malloc(sizeof(float) * net->nbInput);
-    handleMalloc(net->neuron->w);
     net->lenDataTest = (20 * net->lenDataTrain) / 100; // Split dataset to 80% to train and 20% to test
     net->lenDataTrain -= net->lenDataTest;
 

@@ -26,3 +26,14 @@ float logLoss(float *networkOut, float *label, float nb_data)
 
     return (float)((-1 / nb_data) * result);
 }
+
+void computeNetOut(network_t *network, float **x, int len)
+{
+    float result;
+
+    for (int i = 0; i < len; i++) {
+        result = linearFunction(network, i, x);
+        result = network->neuron->activateFunction(result);
+        network->networkOut[i] = result;
+    }
+}

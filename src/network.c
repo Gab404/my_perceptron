@@ -1,8 +1,10 @@
 #include <stdlib.h>
+#include <time.h>
 #include "../includes/header.h"
 
 void initNetwork(network_t *network)
 {
+    srand(time(NULL));
     network->neuron = malloc(sizeof(neuron_t));
     handleMalloc(network->neuron);
 
@@ -30,13 +32,13 @@ void freeNetwork(network_t *net)
     free(net);
 }
 
-void computeNetOut(network_t *network, float **x, int len)
+void createNetwork(network_t *network, char *dataFilepath)
 {
-    float result;
+    initNetwork(network);
+    getData(network, "./data/iris-dataset.data");
 
-    for (int i = 0; i < len; i++) {
-        result = linearFunction(network, i, x);
-        result = network->neuron->activateFunction(result);
-        network->networkOut[i] = result;
-    }
+    network->neuron->w = malloc(sizeof(float) * network->nbInput);
+    handleMalloc(network->neuron->w);
+    for (int i = 0; i < network->nbInput; i++)
+        network->neuron->w[i] = ((float)(rand() % (50 + 1 - 1) + 1)) / 100;
 }
