@@ -41,10 +41,11 @@
 
 The perceptron is a simple neuronal network with only one neuron that can classify two types of linearly separable data.
 
-The neuron has several weights, as many as type of data entry, a linear function and a linearization function (sigmoid).
+The neuron has several weights, as many as type of data entry, a bias, a linear function and a linearization function (sigmoid).
 
 
 Use the `Makefile` to get started on Linux.
+
 Use the `Cmake` or `gcc ./src/*.c` to get started on Windows
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -54,7 +55,7 @@ Use the `Cmake` or `gcc ./src/*.c` to get started on Windows
 ### Built With
 
 
-* [C](https://fr.wikipedia.org/wiki/C_(langage))
+* [C Language](https://fr.wikipedia.org/wiki/C_(langage))
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -76,6 +77,14 @@ Example:
       6.9 5.0 red
       ...
 
+Weights are saved as follows in `./save/`:
+
+      numberData numberInput
+      learningRate
+      weight1
+      ...
+      weightN
+      bias
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -99,4 +108,4 @@ Project Link: [https://github.com/gab_gdp/My_World](https://github.com/Gab404/My
 [forks-url]: https://github.com/Gab404/runner/network/members
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/gabriel-guiet-dupre
-[product-screenshot]: assets/exemple.png
+[product-screenshot]: ./schema.webp
