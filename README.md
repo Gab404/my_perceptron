@@ -67,6 +67,8 @@ Use the `Makefile` to get started on Linux.
 
 Use the `Cmake` or `gcc ./src/*.c` to get started on Windows
 
+
+
 The data input file should be as follows:
 
       numberData numberInput
@@ -80,6 +82,8 @@ Example:
       5.4 1.7 blue
       6.9 5.0 red
       ...
+
+
 
 Weights are saved as follows in `./save/`:
 
@@ -96,7 +100,7 @@ Weights are saved as follows in `./save/`:
 <!-- CONTACT -->
 ## Contact
 
-Gabriel GUIET-DUPRE - [in: gabriel-guiet-dupre](https://linkedin.com/in/gabriel-guiet-dupre) - gabriel.guietdupre@edu.ece
+Gabriel GUIET-DUPRE - [in: gabriel-guiet-dupre](https://linkedin.com/in/gabriel-guiet-dupre) - gabriel.guietdupre@edu.ece.fr
 
 Project Link: [https://github.com/gab_gdp/my_perceptron](https://github.com/Gab404/my_perceptron)
 
