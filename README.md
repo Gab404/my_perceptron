@@ -45,12 +45,8 @@ The neuron has several weights, as many as type of data entry, a bias, a linear 
 
 [![Product Name Screen Shot][loss-function]](https://www.guiet-dupre.com)
 
-I use the Log Loss function to calculate the loss of the network.
+I use the Log Loss function to calculate the loss of the network and I use the gradient descent to propagate gradients. 
 
-
-Use the `Makefile` to get started on Linux.
-
-Use the `Cmake` or `gcc ./src/*.c` to get started on Windows
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -66,6 +62,10 @@ Use the `Cmake` or `gcc ./src/*.c` to get started on Windows
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+Use the `Makefile` to get started on Linux.
+
+Use the `Cmake` or `gcc ./src/*.c` to get started on Windows
 
 The data input file should be as follows:
 
