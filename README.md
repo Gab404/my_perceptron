@@ -37,13 +37,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][schema-network]](https://www.guiet-dupre.com)
+[![Product Name Screen Shot][schema-network]]
 
-The perceptron is a simple neuronal network with only one neuron that can classify two types of linearly separable data.
+The perceptron is a simplest neural network with only one neuron that can classify two types of linearly separable data.
 
-The neuron has several weights, as many as type of data entry, a bias, a linear function and a linearization function (sigmoid).
+The neuron has several weights, as many as type of input data, a bias, a linear function and a linearization function (sigmoid).
 
-[![Product Name Screen Shot][loss-function]](https://www.guiet-dupre.com)
+[![Product Name Screen Shot][loss-function]]
 
 I use the Log Loss function to calculate the loss of the network and I use the gradient descent to propagate gradients. 
 
