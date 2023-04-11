@@ -9,7 +9,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">My World</h3>
+  <h3 align="center">Perceptron Algorithm</h3>
 
   <p align="center">
     Implementation of perceptron algorithm with C language.
@@ -37,11 +37,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://www.guiet-dupre.com)
+[schema-network]
 
 The perceptron is a simple neuronal network with only one neuron that can classify two types of linearly separable data.
 
 The neuron has several weights, as many as type of data entry, a bias, a linear function and a linearization function (sigmoid).
+
+[loss-function]
+
+I use the Log Loss function to calculate the loss of the network.
 
 
 Use the `Makefile` to get started on Linux.
@@ -92,9 +96,9 @@ Weights are saved as follows in `./save/`:
 <!-- CONTACT -->
 ## Contact
 
-Gabriel GUIET-DUPRE - [in: gabriel-guiet-dupre](https://linkedin.com/in/gabriel-guiet-dupre) - gabriel.guiet-dupre@epitech.eu
+Gabriel GUIET-DUPRE - [in: gabriel-guiet-dupre](https://linkedin.com/in/gabriel-guiet-dupre) - gabriel.guietdupre@edu.ece
 
-Project Link: [https://github.com/gab_gdp/My_World](https://github.com/Gab404/My_World)
+Project Link: [https://github.com/gab_gdp/my_perceptron](https://github.com/Gab404/my_perceptron)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -108,4 +112,5 @@ Project Link: [https://github.com/gab_gdp/My_World](https://github.com/Gab404/My
 [forks-url]: https://github.com/Gab404/runner/network/members
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/gabriel-guiet-dupre
-[product-screenshot]: ./schema.webp
+[schema-network]: ./assets/schema.png
+[loss-function]: ./assets/logLoss.png
