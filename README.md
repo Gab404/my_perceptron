@@ -41,7 +41,7 @@
 
 The perceptron is a simplest neural network with only one neuron that can classify two types of linearly separable data.
 
-The neuron has several weights, as many as type of input data, a bias, a linear function and a linearization function (sigmoid).
+The neuron has several weights, as many as type of input data, a bias, a sum of linear function and a linearization function (sigmoid).
 
 ![Product Name Screen Shot][loss-function]
 
