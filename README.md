@@ -79,8 +79,8 @@ The data input file should be as follows:
 Example:
 
       150 2
-      5.4 1.7 blue
-      6.9 5.0 red
+      5.4 1.7 0
+      6.9 5.0 1
       ...
 
 
