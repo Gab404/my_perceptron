@@ -22,7 +22,7 @@ void train(network_t *net, int epochs, bool isSave)
 
     fflush(stdin);
     printf("file path of data file:\n");
-    scanf("%s", &name);
+    scanf("%s", name);
     createNetwork(net, name);
 
     for (int i = 0; i < epochs; i++) { // train loop
@@ -37,7 +37,7 @@ void train(network_t *net, int epochs, bool isSave)
     if (isSave) {
         fflush(stdin);
         printf("save file's name:\n");
-        scanf("%s", &name);
+        scanf("%s", name);
         saveWeights(net, name);
     }
 
