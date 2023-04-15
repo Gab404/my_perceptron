@@ -65,7 +65,7 @@ I use the Log Loss function to calculate the loss of the network and I use the g
 
 Use the `Makefile` to get started on Linux.
 
-Use the `CMakeLists.txt` or `gcc ./src/*.c` to get started on Windows
+Use the `CMakeLists.txt` or `gcc ./src/*.c -lm` to get started on Windows
 
 
 
